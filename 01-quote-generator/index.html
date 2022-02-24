@@ -6,10 +6,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Quote Generator" />
     <meta property="og:description" content="Need a motivational quote? Get it right here." />
-    <meta property="og:image" content="https://unsplash.com/photos/Q8-JvJpAv2g.jpg" />
+    <meta property="og:image" content="https://unsplash.com/photos/Q8-JvJpAv2g" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Generator</title>
+
     <link rel="icon" type="image/png" href="./icons/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
@@ -17,6 +18,7 @@
 
 <body>
     <div class="container" id="container">
+        <!-- share to facebook button -->
         <div id="fb-root"></div>
         <script async defer crossorigin="anonymous"
             src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v13.0&appId=368639645085617&autoLogAppEvents=1"
@@ -41,6 +43,10 @@
                 <i class="fab fa-facebook-f"></i>
             </button>
             <button id="new-quote">New Quote</button>
+        </div>
+
+        <div class="favorite-quote-container">
+            <hr>
         </div>
         <!-- footer -->
         <div>
