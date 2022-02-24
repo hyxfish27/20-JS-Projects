@@ -1,7 +1,8 @@
-const quoteContainer = document.getElementById('quote-container');
+const container = document.getElementById('container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
+const facebookBtn = document.getElementById('fb');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
 
@@ -11,12 +12,12 @@ let apiQuotes = [];
 //Show Loading
 function loading() {
     loader.hidden = false;
-    quoteContainer.hidden = true;
+    container.hidden = true;
 }
 
 //Hide Loading
-function complete(){
-    quoteContainer.hidden = false;
+function complete() {
+    container.hidden = false;
     loader.hidden = true;
 }
 
@@ -62,9 +63,32 @@ function tweetQuote() {
     window.open(twitterUrl, '_blank');
 }
 
+// window.fbAsyncInit = function () {
+//     FB.init({
+//         appId: '368639645085617',
+//         autoLogAppEvents: true,
+//         xfbml: true,
+//         version: 'v13.0'
+//     });
+// };
+
+// onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://developers.facebook.com/docs/plugins/'),'facebook-share-dialog','width=626,height=436'); return false;"
+
+// function fbShareQuote() {
+//     FB.ui({
+//         method: 'share',
+//         href: 'https://developers.facebook.com/docs/',
+//     }, function (response) { });
+// }
+
 //Event Listeners
 newQuoteBtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweetQuote);
+facebookBtn.addEventListener('click', function () {
+    let url = `https://www.facebook.com/sharer/sharer.php?u=`
+    window.open(url, 'facebook-share-dialog', 'width=626,height=436');
+    return false;
+});
 
 // On Load
 getQuotes();

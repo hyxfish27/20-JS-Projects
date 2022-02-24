@@ -234,10 +234,11 @@ p {
 .slider {
   background: #ccc;
   cursor: pointer;
-  bottom: 0; 
+  bottom: 0;
   top: 0;
   left: 0;
-  right: 0; /*跟theme switch一樣大*/
+  right: 0;
+  /*跟theme switch一樣大*/
   position: absolute;
   transition: 0.4s;
 }
@@ -253,11 +254,11 @@ p {
   width: 26px;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background: var(--primary-color);
 }
 
-input:checked + .slider::before {
+input:checked+.slider::before {
   transform: translateX(26px);
 }
 

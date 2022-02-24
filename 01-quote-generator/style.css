@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -19,6 +20,11 @@ body {
   /*容器內部元素對齊*/
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .quote-container {
   width: auto;
   max-width: 900px;
@@ -29,7 +35,7 @@ body {
 }
 
 .quote-text {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
 }
 
 .long-quote {
@@ -48,9 +54,9 @@ body {
 }
 
 .button-container {
-  margin-top: 15px;
+  margin-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 button {
@@ -98,6 +104,7 @@ button:active {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -109,6 +116,7 @@ button:active {
   .quote-container {
     margin: auto 10px;
   }
+
   .quote-text {
     font-size: 2.5rem;
   }
