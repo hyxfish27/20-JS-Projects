@@ -7,7 +7,7 @@
     <meta property="og:title" content="Quote Generator" />
     <meta property="og:description" content="Need a motivational quote? Get it right here." />
     <meta property="og:image"
-        content="https://i0.wp.com/dariusforoux.com/wp-content/uploads/2015/08/motivational-quotes.png?resize=720%2C471&ssl=1" />
+        content="https://images.unsplash.com/photo-1585168373682-c7e50adc2e55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=812&q=80.jpg" />
     <meta property="og:image" content="縮圖圖片連結" />
     <meta property="og:image:alt" content="Quote Generator" />
     <meta charset="UTF-8">
@@ -20,11 +20,21 @@
 </head>
 
 <body>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '368639645085617',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v13.0'
+            });
+        };
+    </script>
     <div class="container" id="container">
         <!-- share to facebook button -->
         <div id="fb-root"></div>
         <script async defer crossorigin="anonymous"
-            src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v13.0&appId=368639645085617&autoLogAppEvents=1"
+            src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v13.0&autoLogAppEvents=1"
             nonce="3hb2hQGJ"></script>
         <div class="quote-container" id="quote-container">
             <!-- Quote -->
@@ -36,38 +46,43 @@
             <div class="quote-author">
                 <span id="author"></span>
             </div>
+            <!-- Buttons -->
+            <div class="button-container">
+                <button class="twitter-button" id="twitter" title="Tweet This !">
+                    <i class="fab fa-twitter"></i>
+                </button>
+                <button class="fav-button" id="favorite" title="favorite">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button id="new-quote">New Quote</button>
+            </div>
         </div>
-        <!-- Buttons -->
-        <div class="button-container">
-            <button class="twitter-button" id="twitter" title="Tweet This !">
-                <i class="fab fa-twitter"></i>
-            </button>
-            <button class="fb-button" id="fb" title="Share This Through FB">
-                <i class="fab fa-facebook-f"></i>
-            </button>
-            <button id="new-quote">New Quote</button>
-        </div>
-
+        <!-- Favorite Quotes -->
         <div class="favorite-quote-container">
             <hr>
         </div>
         <!-- footer -->
-        <div>
+        <div class="footer">
             <p>Developed and Designed by Vicky Huang, 2021</p>
             <div class="social-icons">
                 <i class="fab fa-linkedin"></i>
                 <i class="fab fa-github"></i>
+                <div class="fb-share-button" data-href="https://hyxfish27.github.io/20-JS-Projects/01-quote-generator/"
+                    data-layout="button_count" data-size="large">
+                    <a target="_blank"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhyxfish27.github.io%2f20-JS-Projects%2f01-quote-generator%2f"
+                        class="fb-xfbml-parse-ignore">Share</a>
+                </div>
             </div>
-            <div class="fb-share-button" data-href="https://hyxfish27.github.io/20-JS-Projects/01-quote-generator/"
-                data-layout="button_count" data-size="large"><a target="_blank"
-                    href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhyxfish27.github.io%2f20-JS-Projects%2f01-quote-generator%2f"
-                    class="fb-xfbml-parse-ignore">Share</a></div>
+
         </div>
     </div>
     <!-- Loader -->
     <div class="loader" id="loader"></div>
     <!-- Script -->
     <script src="script.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js"></script>
+
 </body>
 
 </html>

@@ -2,7 +2,6 @@ const container = document.getElementById('container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
-const facebookBtn = document.getElementById('fb');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
 
@@ -84,11 +83,11 @@ function tweetQuote() {
 //Event Listeners
 newQuoteBtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweetQuote);
-facebookBtn.addEventListener('click', function () {
-    let url = `https://www.facebook.com/sharer/sharer.php?u=`
-    window.open(url, 'facebook-share-dialog', 'width=626,height=436');
-    return false;
-});
+// facebookBtn.addEventListener('click', function () {
+//     let url = `https://www.facebook.com/sharer/sharer.php?u=`
+//     window.open(url, 'facebook-share-dialog', 'width=626,height=436');
+//     return false;
+// });
 
 // On Load
 getQuotes();
