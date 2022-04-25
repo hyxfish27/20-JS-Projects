@@ -14,28 +14,12 @@
     <title>Quote Generator</title>
 
     <link rel="icon" type="image/png" href="./icons/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '368639645085617',
-                autoLogAppEvents: true,
-                xfbml: true,
-                version: 'v13.0'
-            });
-        };
-    </script>
     <div class="container" id="container">
-        <!-- share to facebook button -->
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous"
-            src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v13.0&appId=368639645085617&autoLogAppEvents=1"
-            nonce="UtMOpvgj"></script>
-
         <div class="quote-container" id="quote-container">
             <!-- Quote -->
             <div class="quote-text">
@@ -54,33 +38,30 @@
                 <button class="fav-button" id="favorite" title="favorite">
                     <i class="fa fa-heart"></i>
                 </button>
-                <button id="new-quote">New Quote</button>
+                <button class="new-quote" id="new-quote">New Quote</button>
             </div>
         </div>
-        <!-- Favorite Quotes -->
-        <div class="favorite-quote-container">
-            <hr>
+
+        <!-- Loader -->
+        <div class="loader" id="loader"></div>
+        <button type="button" class="show-favorite" id="show-favorite">My Favorite Quotes</button>
+        <!-- favorite quotes -->
+        <div class="favorite-container hidden">
+
+
         </div>
         <!-- footer -->
         <div class="footer">
             <div class="social-icons">
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-github"></i>
-                <div class="fb-share-button" data-href="https://hyxfish27.github.io/20-JS-Projects/01-quote-generator/"
-                    data-layout="button_count" data-size="large"><a target="_blank"
-                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhyxfish27.github.io%2F20-JS-Projects%2F01-quote-generator%2F&amp;src=sdkpreparse"
-                        class="fb-xfbml-parse-ignore">分享</a>
-                </div>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
             </div>
             <p>Developed and Designed by Vicky Huang, &copy;2021</p>
         </div>
     </div>
-    <!-- Loader -->
-    <div class="loader" id="loader"></div>
+
     <!-- Script -->
     <script src="script.js"></script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js"></script>
-
 </body>
 
 </html>
